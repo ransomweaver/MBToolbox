@@ -114,7 +114,12 @@ typedef NS_OPTIONS(NSUInteger, MBNetworkAvailabilityFlags) {
     with the device. */
 @property(nonatomic, readonly) NSString* cellularCarrierCountry;
 
-/*! Returns a string identifying the type of cellular connection currently in 
+
+/*! Returns the full CoreTelephony string identifying the type of cellular connection currently in
+ use by the device. */
+@property(nonatomic, readonly) NSString* cellularConnection;
+
+/*! Returns a short string identifying the type of cellular connection currently in
     use by the device. */
 @property(nonatomic, readonly) NSString* cellularConnectionType;
 

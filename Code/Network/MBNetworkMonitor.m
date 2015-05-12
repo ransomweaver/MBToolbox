@@ -199,6 +199,11 @@ static void NetworkMonitorReachabilityCallback(SCNetworkReachabilityRef target, 
 
 - (NSString*) cellularConnectionType
 {
+    return _carrierNetworkInfo.currentRadioAccessTechnology;
+}
+
+- (NSString*) cellularConnectionType
+{
     NSString* radioType = _carrierNetworkInfo.currentRadioAccessTechnology;
     if ([radioType hasPrefix:kMBNetworkRadioAccessTechnologyPrefix]) {
         return [radioType substringFromIndex:kMBNetworkRadioAccessTechnologyPrefix.length];
