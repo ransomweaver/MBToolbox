@@ -197,7 +197,7 @@ static void NetworkMonitorReachabilityCallback(SCNetworkReachabilityRef target, 
     return _carrierNetworkInfo.subscriberCellularProvider.isoCountryCode;
 }
 
-- (NSString*) cellularConnectionType
+- (NSString*) cellularConnection
 {
     return _carrierNetworkInfo.currentRadioAccessTechnology;
 }
